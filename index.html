@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Laboratório de Física com simulações interativas em tempo real.">
+<title>Laboratório de Física</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<div class="app-shell">
+  <div class="topbar">
+    <div class="brand" onclick="showHome()"><span class="dot"></span> LABORATÓRIO&nbsp;DE&nbsp;FÍSICA</div>
+    <div class="crumb" id="crumb"></div>
+  </div>
+
+  <!-- HOME -->
+  <div class="screen active" id="screen-home">
+    <div class="hero">
+      <div>
+        <h1>Veja a <span class="accent">fórmula</span><br>acontecer.</h1>
+        <p>Cada equação aqui simula fisicamente o que ela descreve. Mude um valor e observe o fenômeno mudar em tempo real — na tela, no gráfico e no número.</p>
+        <div class="note">→ nenhuma calculadora escondida: posição, velocidade, força e energia são sempre derivadas do mesmo modelo matemático mostrado a você.</div>
+      </div>
+      <div class="hero-demo">
+        <span class="tag">DEMO · queda livre</span>
+        <canvas id="hero-canvas"></canvas>
+      </div>
+    </div>
+
+    <p class="section-label">Escolha uma área</p>
+    <div class="cat-grid" id="cat-grid"></div>
+  </div>
+
+  <!-- CATEGORY -->
+  <div class="screen" id="screen-category">
+    <button class="btn-back" onclick="showHome()">← Voltar</button>
+    <div class="cat-header">
+      <h2 id="cat-title"></h2>
+      <p id="cat-desc"></p>
+    </div>
+    <div class="topic-list" id="topic-list"></div>
+  </div>
+
+  <!-- TOPIC -->
+  <div class="screen" id="screen-topic">
+    <div id="topic-root"></div>
+  </div>
+
+  <footer>Laboratório de Física — simulações calculadas em tempo real · unidades SI</footer>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
